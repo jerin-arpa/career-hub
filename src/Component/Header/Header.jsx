@@ -4,13 +4,13 @@ const Header = () => {
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="statistics">Statistics</NavLink></li>
         <li><NavLink to="/appliedJob">Applied Jobs</NavLink></li>
         <li><NavLink to="/blog">Blog</NavLink></li>
+        <li><NavLink to="statistics">Statistics</NavLink></li>
     </>
 
     return (
-        <div className="navbar bg-base-100 px-0">
+        <div className="navbar px-0 container mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
