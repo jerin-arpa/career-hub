@@ -16,7 +16,7 @@ const JobDetails = () => {
         <div>
             <JobBanner></JobBanner>
             <div className="flex flex-col lg:flex-row gap-7 my-20">
-                <div className=" w-full lg:w-3/4 shadow-2xl rounded-xl p-5">
+                <div className=" w-full lg:w-3/4 rounded-xl p-5">
                     <div className="pb-5">
                         <span className="font-bold text-xl">Job Description:</span> {job.job_description}
                     </div>
@@ -34,7 +34,7 @@ const JobDetails = () => {
                 </div>
 
                 <div className=" w-full lg:w-1/4">
-                    <div className="bg-gray-100 rounded-lg p-5">
+                    <div className="border-2 rounded-lg p-5">
                         <h2 className=" font-bold">Job Details</h2>
                         <hr className="my-3" />
 
