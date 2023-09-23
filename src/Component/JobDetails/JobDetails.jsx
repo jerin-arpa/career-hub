@@ -3,6 +3,9 @@ import JobBanner from "../JobBanner/JobBanner";
 import { GoLocation } from 'react-icons/go';
 import { AiOutlineDollar, AiOutlineMail } from 'react-icons/ai';
 import { BsCalendarWeek, BsTelephone } from 'react-icons/bs';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../../Utility/localstorage";
 
 
 const JobDetails = () => {
@@ -11,6 +14,13 @@ const JobDetails = () => {
     const idInt = parseInt(id);
     const job = jobs.find(job => job.id === idInt)
     console.log(job);
+
+
+    const handleApplyJob = () => {
+        saveJobApplication(idInt);
+        toast('You have applied successfully')
+    }
+
 
     return (
         <div>
@@ -68,12 +78,12 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <div className="mt-5">
-                        <button className="btn btn-primary w-full">Apply Now</button>
+                        <button onClick={handleApplyJob} className="btn btn-primary w-full">Apply Now</button>
                     </div>
                 </div>
-
-
             </div>
+
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
